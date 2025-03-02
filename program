@@ -1,0 +1,20 @@
+import random
+lists = []
+l1 = []
+l2 = []
+for i in range(20):
+    lists.append(random.randint(-50,50))
+avg = sum(lists)/20
+for i in lists:
+    if(i<avg):
+        if(i<0):
+            l1.append(i)
+        else:
+            l2.append(i)
+    else:
+        if(round(i/2)*2>i):
+            l1.append(i)
+        else:
+            l2.append(i)
+print(lists)
+print(l1,l2)
