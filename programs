@@ -1,0 +1,20 @@
+num = []
+ava = ["open","open","you booked","open","open","you booked","open","you booked","open","you booked","open","you booked","open","you booked","open","you booked","open","you booked"]
+for i in range(len(ava)):
+    num.append((i))
+print(num,ava)
+con = input("Would you like to book a room or cancel or check?  ")
+if(con == "book"):
+    booking = int(input("What number? "))
+    if(booking in num):
+        ava[booking] = "you booked"
+    else:
+        print("invalid")
+elif(con == "cancel"):
+    cancelation = int(input("What number? "))
+    if(cancelation in num):
+        ava[cancelation] = "open"
+    else:
+        print("invalid")
+elif(con == "check"):
+    print(num,ava)
